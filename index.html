@@ -2,14 +2,214 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project1</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project1</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
+    integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"
+    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
-<body>
-    <script src="assets/js/script.js"></script>
+<body class="has-navbar-fixed-top has-background-grey">
+  <nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation"></nav>
+  <section class="hero is-link">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">What is for dinner?</h1>
+    </div>
+  </section>
+
+  <div class="columns">
+    <div class="column is-one-fifth has-background-grey">
+      <div class="box has-background-link">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Hungry For?">
+          </div>
+        </div>
+        <h1 class="title is-4 has-text-left has-text-white-ter">Search Area</h1>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Cuisine/Style</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Prep Time</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Difficulty</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Protein</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Vegetable</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Starch</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Style</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="column">
+      <div class="colummns">
+        <div class="column has-background-grey">
+          <div class="box has has-background-link"></div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-fifth has-background-grey">
+          <div class="box has-background-link">
+            <h1 class="title is-4 has-text-left has-text-white-ter">Ingredients list</h1>
+            <ul class="has-text-white-ter">
+              <li>create li in JQ</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column has-background-grey">
+          <div class="box has-background-link">
+            <h1 class="title is-4 has-text-centered has-text-white-ter">Recipe Area</h1>
+
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+  </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+
+
 </body>
 
 </html>
+
+<!-- question mark -->
