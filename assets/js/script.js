@@ -1,11 +1,6 @@
-// javascript
-require(["dojo/request"], function (request) {
-  request("helloworld.txt").then(
-    function (text) {
-      console.log("The file's content is: " + text);
-    },
-    function (error) {
-      console.log("An error occurred: " + error);
-    }
-  );
-});
+$(document).ready(function () {
+  $(".dropdown").on("click", function (event) {
+    event.stopPropagation();
+    $(this).toggleClass("is-active");
+  })
+})

@@ -6,9 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Project1</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
     integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"
+    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body class="has-navbar-fixed-top has-background-grey">
@@ -22,11 +24,16 @@
   <div class="columns">
     <div class="column is-one-fifth has-background-grey">
       <div class="box has-background-link">
+        <div class="field">
+          <div class="control">
+            <input class="input" type="text" placeholder="Hungry For?">
+          </div>
+        </div>
         <h1 class="title is-4 has-text-left has-text-white-ter">Search Area</h1>
         <div class="dropdown">
           <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>Style</span>
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Cuisine/Style</span>
               <span class="icon is-small">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </span>
@@ -36,42 +43,60 @@
             <div class="dropdown-content">
               <a href="#" class="dropdown-item">ie Italian</a>
               <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
-              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Prep Time</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
               <a href="#" class="dropdown-item">ie Italian</a>
               <a href="#" class="dropdown-item">ie Italian</a>
             </div>
           </div>
         </div>
-        <h1 class="title is-4 has-text-left has-text-white-ter">Prep Time</h1>
-        <input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range">
-        <h1 class="title is-4 has-text-left has-text-white-ter">Difficulty</h1>
-        <input class="slider is-fullwidth is-small" step="1" min="0" max="100" value="50" type="range">
+        <br>
+        <br>
         <div class="dropdown">
           <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Difficulty</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
               <span>Protein</span>
               <span class="icon is-small">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </span>
             </button>
           </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
             <div class="dropdown-content">
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
-              <a href="#" class="dropdown-item">ie chicken</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
             </div>
           </div>
         </div>
@@ -79,25 +104,17 @@
         <br>
         <div class="dropdown">
           <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
               <span>Vegetable</span>
               <span class="icon is-small">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </span>
             </button>
           </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
             <div class="dropdown-content">
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
-              <a href="#" class="dropdown-item">ie carrots</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
             </div>
           </div>
         </div>
@@ -105,79 +122,92 @@
         <br>
         <div class="dropdown">
           <div class="dropdown-trigger">
-            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
               <span>Starch</span>
               <span class="icon is-small">
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
               </span>
             </button>
           </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
             <div class="dropdown-content">
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
-              <a href="#" class="dropdown-item">ie rice</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Style</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">ie Italian</a>
+              <a href="#" class="dropdown-item">ie Italian</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="column is-one-fifth has-background-grey">
-      <div class="box has-background-link">
-        <h1 class="title is-4 has-text-left has-text-white-ter">Ingredients list</h1>
-        <ul class="has-text-white-ter">
-          <li>create li in JQ</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-          <li>example</li>
-        </ul>
+    <div class="column">
+      <div class="colummns">
+        <div class="column has-background-grey">
+          <div class="box has has-background-link"></div>
+        </div>
       </div>
-    </div>
-    <div class="column is-one-half has-background-grey">
-      <div class="box has-background-link">
-        <h1 class="title is-4 has-text-centered has-text-white-ter">Recipe Area</h1>
+      <div class="columns">
+        <div class="column is-one-fifth has-background-grey">
+          <div class="box has-background-link">
+            <h1 class="title is-4 has-text-left has-text-white-ter">Ingredients list</h1>
+            <ul class="has-text-white-ter">
+              <li>create li in JQ</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+              <li>example</li>
+            </ul>
+          </div>
+        </div>
+        <div class="column has-background-grey">
+          <div class="box has-background-link">
+            <h1 class="title is-4 has-text-centered has-text-white-ter">Recipe Area</h1>
 
+          </div>
+        </div>
       </div>
+
+
+
     </div>
+
+  </div>
+  </div>
   </div>
   <script src="assets/js/script.js"></script>
 
 
-  <script>
-    //DOMContentLoaded - it fires when initial HTML document has been completely loaded
-    document.addEventListener('DOMContentLoaded', function () {
-      // querySelector - it returns the element within the document that matches the specified selector
-      var dropdown = document.querySelector('.dropdown');
-
-      //addEventListener - attaches an event handler to the specified element.
-      dropdown.addEventListener('click', function (event) {
-
-        //event.stopPropagation() - it stops the bubbling of an event to parent elements, by preventing parent event handlers from being executed
-        event.stopPropagation();
-
-        //classList.toggle - it toggles between adding and removing a class name from an element
-        dropdown.classList.toggle('is-active');
-      });
-    });
-  </script>
 </body>
 
 </html>
