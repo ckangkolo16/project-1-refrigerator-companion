@@ -5,3 +5,7 @@
 .hero {
   padding-top: 30px;
 }
+
+.button {
+  width: 182px !important;
+}
