@@ -1,35 +1,85 @@
 $(document).ready(function () {
-  var recipeList = [];
-  $("#searchBtn").on("click", function () {
-    ///get value of what is in the input
-    let recipe = $("#searchRecipe").val();
-    //clear input box
-    $("#searchRecipe").val("");
-    //pass the variable into a function to run your ajax call and call that function
-    
+  // function keyCode(event) {
+  //   const w = event.keyCode;
+  //   if (w == 13) {
+  //     console.log("you've hit enter");
+  //   } else {
+  //     return;
+  //   }
+  // }
+  $("#searchBtn").click(function () {
+    var ingredientSearched = $("#searchRecipe").val();
+
+    // change v1 to v2 & add apiKey
+    searchByName(ingredientSearched);
   });
 
-function renderRecipes(recipe) {
-    var APIID = "d04073fe"
-    var APIKey = "fed5ca5263ce63fa1ad93a6a12d222f8";
-    
-    //Url to query database
-
-    var queryUrl = "https://api.edamam.com/search?q=chicken&app_id=${YOUR_APP_ID}&app_key=${YOUR_APP_KEY} "
-+ APIID; +
-      APIKey;
-
+  //populate the recipe area with recipe list
+  function searchByName(searchValue) {
+    var queryURL =
+      "https://www.themealdb.com/api/json/v2/9973533/filter.php?i=" +
+      searchValue;
     $.ajax({
-      url: queryUrl,
+      url: queryURL,
       method: "GET",
       dataType: "json",
     }).then(function (response) {
-      console.log(response);
-      
+      //clear out current Carousel
+      $("#pictureCaro").empty();
+
+      // var images = $("<img>").attr("src", mealPic).addClass("img-click");
+
+      // $("images").text(JSON.stringify(response);
+      //createElement div  with img for pictures
+      for (var i = 0; i < response.meals.length; ++i) {
+        var mealId = response.meals[i].idMeal;
+        console.log(mealId);
+        // images.attr("alt", mealName);
+        var mealPic = response.meals[i].strMealThumb;
+        var mealName = response.meals[i].strMeal;
+
+        $("#pictureCaro").append(
+          $("<div>")
+            .addClass("media-content")
+            .attr("id", "menu-card")
+            .attr("style", "max-width: 7rem; margin-left: 23px")
+
+            .append(
+              $("<img src=" + mealPic + ">")
+                .addClass("img-click")
+                .attr("height", "50px")
+                .attr("width", "50px")
+            )
+            .append($("<p>").html(mealName))
+        );
+
+        searchById(mealId);
+      }
+      $(".img-click").on("click", function () {
+        console.log("successful click");
+      });
     });
   }
-  $(".dropdown").on("click", function (event) {
-    event.stopPropagation();
-    $(this).toggleClass("is-active");
-  })
-})
+
+  function searchById(id) {
+    $.ajax({
+      type: "GET",
+      url: `https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${id}`,
+      dataType: "json",
+      success: function (response) {
+        $(".img-click").on("click", function () {
+          $("#recipe-box").empty();
+          $("#recipe-box").removeClass("hide");
+
+          var recipeInt = $("<p>").text(response.meals[0].strInstructions);
+
+          $("#recipe-box").append(recipeInt);
+        });
+      },
+    });
+  }
+
+  function showRecipeDetails() {
+    //on img-click we display recipe box and append in recipe instructions
+  }
+});
