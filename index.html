@@ -66,7 +66,6 @@
                 id="searchRecipe"
                 class="input"
                 type="text"
-                onkeydown="keyCode(event)"
                 placeholder="Hungry For?"
               />
               <br />
@@ -311,32 +310,10 @@
             </div>
           </div>
           <div class="column has-background-grey-lighter">
-            <div class="box has-background-grey-light">
-              <h1 class="title is-4 has-text-centered has-text-black-ter">
-                Recipe Area
-              </h1>
-
-              <ol class="has-text-black-ter">
-                <li>
-                  Step 1 Bring a large pot of lightly salted water to a boil.
-                  Add pasta and cook for 8 to 10 minutes or until al dente;
-                  drain.
-                </li>
-                <br />
-                <li>
-                  Step 2 Heat oil in a large skillet over medium heat. Saute
-                  garlic until tender, then stir in chicken. Season with red
-                  pepper flakes. Cook until chicken is golden, and cooked
-                  through.
-                </li>
-
-                <br />
-                <li>
-                  Step 3 In a large bowl, combine pasta, chicken, sun-dried
-                  tomatoes and pesto. Toss to coat evenly.
-                </li>
-              </ol>
-            </div>
+            <div
+              class="box has-background-grey-light hide"
+              id="recipe-box"
+            ></div>
           </div>
         </div>
       </div>
