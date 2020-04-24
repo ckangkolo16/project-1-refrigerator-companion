@@ -21,7 +21,9 @@
     ></script>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+  <!-- Start -->
   <body>
+    <!-- Nav Bar -->
     <nav class="navbar is-fixed-top is-dark">
       <div class="container">
         <div class="navbar-brand">
@@ -47,21 +49,24 @@
         </div>
       </div>
     </nav>
+    <!-- START Banner -->
     <section class="hero is-black">
       <div class="hero-body has-text-centered">
         <h1 class="title is-2">What's for dinner?</h1>
       </div>
     </section>
-
+    <!-- Start Aside search parameters -->
     <div class="columns">
       <div class="column is-one-fifth has-background-grey-lighter">
         <div class="box has-background-grey-light">
           <div class="field">
             <div class="control">
+              <!-- adding an event listener to allow us to click enter into search -->
               <input
                 id="searchRecipe"
                 class="input"
                 type="text"
+                onkeydown="keyCode(event)"
                 placeholder="Hungry For?"
               />
               <br />
@@ -216,6 +221,7 @@
                 </span>
               </button>
             </div>
+            <!-- -->
             <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
               <div class="dropdown-content">
                 <a href="#" class="dropdown-item">ie Italian</a>
@@ -227,7 +233,14 @@
       </div>
       <div class="column">
         <div class="columns">
-          <div class="column has-background-grey-lighter">
+          <!-- Start of the 2nd column as Picture Carousel -->
+          <!-- Display 5 recipe cards -->
+          <!-- When clicked display full description w/ 3 to 4 more photos -->
+          <div
+            id="pictureCaro"
+            class="column has-background-grey-lighter"
+            style="display: flex;"
+          >
             <img
               src="assets/images/CreamyBeefandShells.jpg"
               class="w3-circle"
