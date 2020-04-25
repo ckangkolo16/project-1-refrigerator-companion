@@ -55,12 +55,19 @@ $(document).ready(function () {
 
         searchById(mealId);
       }
-      $(".img-click").on("click", function () {
-        console.log("successful click");
-      });
     });
   }
+  // $(".img-click").on("click", function () {
+  //   console.log("successful click");
+  //   $(".img-click").on("click", function () {
+  //     $("#recipe-box").empty();
+  //     $("#recipe-box").removeClass("hide");
 
+  //     var recipeInt = $("<p>").text(response.meals[0].strInstructions);
+
+  //     $("#recipe-box").append(recipeInt);
+  //   });
+  // });
   function searchById(id) {
     $.ajax({
       type: "GET",
@@ -68,6 +75,7 @@ $(document).ready(function () {
       dataType: "json",
       success: function (response) {
         $(".img-click").on("click", function () {
+          console.log("initial click");
           $("#recipe-box").empty();
           $("#recipe-box").removeClass("hide");
 
@@ -83,3 +91,26 @@ $(document).ready(function () {
     //on img-click we display recipe box and append in recipe instructions
   }
 });
+// Generic function for displaying the movieInfo
+// $(document).on("click", ".movie", displayMovieInfo);function displayMovieInfo() {
+//   var movie = $(this).attr("data-name");
+//   // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
+//   var queryURL =
+//     "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
+
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET",
+//   }).then(function (res) {
+//     console.log("here is the movie data!");
+//     $(".movie-view").html(
+//       "<pre>" +
+//         JSON.stringify(
+//           res.Title + " was released in  " + res.Year,
+//           null,
+//           2
+//         ) +
+//         "</pre>"
+//     );
+//   });
+// }
