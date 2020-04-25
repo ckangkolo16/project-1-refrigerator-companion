@@ -1,328 +1,229 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>REFRIGERATOR COMPANION</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REFRIGERATOR COMPANION</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.8.2/css/bulma.min.css"
     integrity="sha256-qS+snwBgqr+iFVpBB58C9UCxKFhyL03YHpZfdNUhSEw=" crossorigin="anonymous" />
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.slim.min.js"
-    integrity="sha256-MlusDLJIP1GRgLrOflUQtshyP0TwT/RHXsI1wWGnQhs=" crossorigin="anonymous"></script>
-            
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-    ></script>
-     <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <body>
-    <nav class="navbar is-fixed-top is-dark">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html" style="font-weight: bold;"
-             >REFRIGERATOR COMPANION</a> 
-          <a class="navbar-item" href="rotd.html" style="font-weight: bold;"
-             >ROTD</a>
-        </div>
-        <div id="navMenu" class="navbar-menu">
-          <div class="navbar-end">
-            <a href="index.html" class="navbar-item is-active">Home</a>
-            <a href="yourcookbook.html" class="navbar-item">Your Cookbook</a>
-            <a
-              href="https://blog.feedspot.com/home_cooking_blogs/"
-              class="navbar-item"
-              >Blog</a
-            >
-            <a href="#" class="navbar-item">Other Services</a>
-            <a href="contactus.html" class="navbar-item">Contact Us</a>
-          </div>
+
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<!-- Start -->
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar is-fixed-top is-dark">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html" style="font-weight: bold;">REFRIGERATOR COMPANION</a>
+        <a class="navbar-item" href="rotd.html" style="font-weight: bold;">ROTD</a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-end">
+          <a href="index.html" class="navbar-item is-active">Home</a>
+          <a href="yourcookbook.html" class="navbar-item">Your Cookbook</a>
+          <a href="https://blog.feedspot.com/home_cooking_blogs/" class="navbar-item">Blog</a>
+          <a href="#" class="navbar-item">Other Services</a>
+          <a href="contactus.html" class="navbar-item">Contact Us</a>
         </div>
       </div>
-    </nav>
-    <section class="hero is-black">
-      <div class="hero-body has-text-centered">
-        <h1 class="title is-2">What's for dinner?</h1>
-      </div>
-    </section>
-
-    <div class="columns">
-      <div class="column is-one-fifth has-background-grey-lighter">
-        <div class="box has-background-grey-light">
-          <div class="field">
-            <div class="control">
-              <input
-                id="searchRecipe"
-                class="input"
-                type="text"
-                placeholder="Hungry For?"
-              />
-              <br />
-              <button id="searchBtn" class="button is-dark">Search</button>
-            </div>
+    </div>
+  </nav>
+  <!-- START Banner -->
+  <section class="hero is-black">
+    <div class="hero-body has-text-centered">
+      <h1 class="title is-2">What's for dinner?</h1>
+    </div>
+  </section>
+  <!-- Start Aside search parameters -->
+  <div class="columns">
+    <div class="column is-one-fifth has-background-grey-lighter">
+      <div class="box has-background-grey-light">
+        <div class="field">
+          <div class="control">
+            <!-- adding an event listener to allow us to click enter into search -->
+            <input id="searchRecipe" class="input" type="text" placeholder="Hungry For?" />
+            <br />
+            <button id="searchBtn" class="button is-dark">Search</button>
           </div>
-          <h1 class="title is-4 has-text-left has-text-white-ter">
-            I Want to Make
-          </h1>
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu"
-              >
-                <span>Cuisine/Style</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
+        </div>
+        <h1 class="title is-4 has-text-left has-text-white-ter">
+          I Want to Make
+        </h1>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Cuisine/Style</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
           </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Prep Time</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Difficulty</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Protein</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Vegetable</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Starch</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
-            </div>
-          </div>
-          <br />
-          <br />
-          <div class="dropdown">
-            <div class="dropdown-trigger">
-              <button
-                class="button is-medium is-fullwidth"
-                aria-haspopup="true"
-                aria-controls="dropdown-menu-b"
-              >
-                <span>Style</span>
-                <span class="icon is-small">
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
-            </div>
-            <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
-              <div class="dropdown-content">
-                <a href="#" class="dropdown-item">ie Italian</a>
-                <a href="#" class="dropdown-item">ie Italian</a>
-              </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="https://www.allrecipes.com/article/best-italian-recipes/" target="_blank"
+                class="dropdown-item">Italian</a>
+              <a href="https://www.buzzfeed.com/marietelling/44-classic-french-meals-you-need-to-try-before-you-die"
+                target="_blank" class="dropdown-item">French</a>
+              <a href="https://www.delish.com/cooking/g1899/simply-indian-recipes/" target="_blank"
+                class="dropdown-item">Indian</a>
+              <a href="https://www.delish.com/cooking/a39090/thai-recipes/" target="_blank"
+                class="dropdown-item">Thai</a>
+              <a href="https://www.delish.com/cooking/g4016/greek-food-recipes/" target="_blank"
+                class="dropdown-item">Greek</a>
+              <a href="https://www.allrecipes.com/recipes/16091/us-recipes/soul-food/" target="_blank"
+                class="dropdown-item">Soul Food</a>
+              <a href="https://www.japancentre.com/en/cookings/61-japanese-meals" target="_blank"
+                class="dropdown-item">Japanese</a>
+              <a href="https://www.delish.com/cooking/g1393/traditional-mexican-food-0710/" target="_blank"
+                class="dropdown-item">Mexican</a>
+              <a href="https://www.foodnetwork.com/topics/cajun" target="_blank" class="dropdown-item">Cajun</a>
+              <a href="https://www.allrecipes.com/recipes/230/world-cuisine/latin-american/caribbean/" target="_blank"
+                class="dropdown-item">Carribean</a>
             </div>
           </div>
         </div>
-      </div>
-      <div class="column">
-        <div class="columns">
-          <div class="column has-background-grey-lighter">
-            <img
-              src="assets/images/CreamyBeefandShells.jpg"
-              class="w3-circle"
-              alt="Alps"
-              width="150"
-              height="150"
-            />
-
-            <img
-              src="assets/images/creamychickenpesto.jpg"
-              class="w3-circle"
-              alt="Alps"
-              width="142"
-              height="142"
-            />
-            <img
-              src="assets/images/pasta.jpg"
-              class="w3-circle"
-              alt="Alps"
-              width="180"
-              height="180"
-            />
-            <img
-              src="assets/images/pasta2.jpg"
-              class="w3-circle"
-              alt="Alps"
-              width="300"
-              height="300"
-            />
-
-            <img
-              src="assets/images/puttanesca.jpg"
-              class="w3-circle"
-              alt="Alps"
-              width="245"
-              height="245"
-            />
+        <br />
+        <br />
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Protein</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
           </div>
-        </div>
-        <div class="columns">
-          <div class="column is-one-quarter has-background-grey-lighter">
-            <div class="box has-background-grey-light">
-              <h1 class="title is-4 has-text-left has-text-black-ter">
-                Ingredients list
-              </h1>
-              <ul class="has-text-black-ter">
-                <li>create li in JQ</li>
-                <li>1 (16 ounce) package bow tie pasta</li>
-                <li>1 teaspoon olive oil</li>
-                <li>2 cloves garlic, minced</li>
-                <li>
-                  2 boneless skinless chicken breasts, cut into bite-size pieces
-                </li>
-                <li>crushed red pepper flakes to taste</li>
-                <li>
-                  ⅓ cup oil-packed sun-dried tomatoes, drained and cut into
-                  strips
-                </li>
-                <li>½ cup pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-                <li>pesto sauce</li>
-              </ul>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
             </div>
           </div>
-          <div class="column has-background-grey-lighter">
-            <div class="box has-background-grey-light">
-              <h1 class="title is-4 has-text-centered has-text-black-ter">
-                Recipe Area
-              </h1>
-
-              <ol class="has-text-black-ter">
-                <li>
-                  Step 1 Bring a large pot of lightly salted water to a boil.
-                  Add pasta and cook for 8 to 10 minutes or until al dente;
-                  drain.
-                </li>
-                <br />
-                <li>
-                  Step 2 Heat oil in a large skillet over medium heat. Saute
-                  garlic until tender, then stir in chicken. Season with red
-                  pepper flakes. Cook until chicken is golden, and cooked
-                  through.
-                </li>
-
-                <br />
-                <li>
-                  Step 3 In a large bowl, combine pasta, chicken, sun-dried
-                  tomatoes and pesto. Toss to coat evenly.
-                </li>
-              </ol>
+        </div>
+        <br />
+        <br />
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Vegetable</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Starch</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="button is-medium is-fullwidth" aria-haspopup="true" aria-controls="dropdown-menu-b">
+              <span>Style</span>
+              <span class="icon is-small">
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <!-- -->
+          <div class="dropdown-menu" id="dropdown-menu-b" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
+              <a href="#" class="dropdown-item">UNDER CONSTRUCTION!</a>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="column">
+      <div class="columns">
+        <!-- Start of the 2nd column as Picture Carousel -->
+        <!-- Display 5 recipe cards -->
+        <!-- When clicked display full description w/ 3 to 4 more photos -->
+        <div id="pictureCaro" class="column has-background-grey-lighter" style="display: flex;">
+          <img src="assets/images/CreamyBeefandShells.jpg" class="w3-circle" alt="Alps" width="150" height="150" />
+
+          <img src="assets/images/creamychickenpesto.jpg" class="w3-circle" alt="Alps" width="142" height="142" />
+          <img src="assets/images/pasta.jpg" class="w3-circle" alt="Alps" width="180" height="180" />
+          <img src="assets/images/pasta2.jpg" class="w3-circle" alt="Alps" width="300" height="300" />
+
+          <img src="assets/images/puttanesca.jpg" class="w3-circle" alt="Alps" width="245" height="245" />
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column is-one-quarter has-background-grey-lighter">
+          <div class="box has-background-grey-light">
+            <h1 class="title is-4 has-text-left has-text-black-ter">
+              Ingredients list
+            </h1>
+            <ul class="has-text-black-ter">
+              <li id="ingListOne"></li>
+              <li id="ingListTwo"></li>
+              <li id="ingListThree"></li>
+              <li id="ingListFour"></li>
+              <li id="ingListFive"></li>
+              <li id="ingListSix"></li>
+              <li id="ingListSeven"></li>
+              <li id="ingListEight"></li>
+              <li id="ingListNine"></li>
+              <li id="ingListTen"></li>
+              <li id="ingListEleven"></li>
+              <li id="ingListTwelve"></li>
+              <li id="ingListThirteen"></li>
+              <li id="ingListFourteen"></li>
+              <li id="ingListFifteen"></li>
+              <li id="ingListSixteen"></li>
+              <li id="ingListSeventeen"></li>
+              <li id="ingListEighteen"></li>
+              <li id="ingListNineteen"></li>
+              <li id="ingListTwenty"></li>
 
 
-    <script src="assets/js/script.js"></script>
-  </body>
+            </ul>
+          </div>
+        </div>
+        <!--This is where the recipe should go-->
+        <div class=" column has-background-grey-lighter">
+          <div class="box has-background-grey-light" id="recipe-box">
+            <h1 class="title is-4 has-text-left has-text-black-ter">
+              Cooking Instructions:
+            </h1>
+            <p class="has-text-black-ter" id="instructionSteps"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+
 </html>
