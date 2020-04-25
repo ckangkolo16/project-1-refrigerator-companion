@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  $(".dropdown").on("click", function (event) {
+    event.stopPropagation();
+    $(this).toggleClass("is-active");
+  });
+});
+
+
+$(document).ready(function () {
   // function keyCode(event) {
   //   const w = event.keyCode;
   //   if (w == 13) {
