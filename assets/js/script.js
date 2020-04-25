@@ -15,102 +15,97 @@ $(document).ready(function () {
   });
 
   //populate the recipe area with recipe list
+
   function searchByName(searchValue) {
     var queryURL =
       "https://www.themealdb.com/api/json/v2/9973533/filter.php?i=" +
       searchValue;
+    console.log(queryURL + " is keyword search results");
     $.ajax({
       url: queryURL,
       method: "GET",
       dataType: "json",
     }).then(function (response) {
-      //clear out current Carousel
+      console.log(response);
+
       $("#pictureCaro").empty();
-
-      // var images = $("<img>").attr("src", mealPic).addClass("img-click");
-
-      // $("images").text(JSON.stringify(response);
-      //createElement div  with img for pictures
-      for (var i = 0; i < response.meals.length; ++i) {
+      for (var i = 0; i < response.meals.length; i++) {
         var mealId = response.meals[i].idMeal;
         console.log(mealId);
-        // images.attr("alt", mealName);
         var mealPic = response.meals[i].strMealThumb;
         var mealName = response.meals[i].strMeal;
 
         $("#pictureCaro").append(
           $("<div>")
-            .addClass("media-content")
-            .attr("id", "menu-card")
-            .attr("style", "max-width: 7rem; margin-left: 23px")
+          .addClass("media-content")
+          .attr("id", "menu-card")
+          .attr("style", "max-width: 7rem; margin-left: 23px")
 
-            .append(
-              $("<img src=" + mealPic + ">")
-                .addClass("img-click")
-                .attr("height", "50px")
-                .attr("width", "50px")
-            )
-            .append($("<p>").html(mealName))
+          .append(
+            $("<img src=" + mealPic + ">")
+            .addClass("img-click")
+            .attr("height", "50px")
+            .attr("width", "50px")
+          )
+          .append($("<p>").html(mealName))
         );
 
         searchById(mealId);
       }
     });
   }
-  // $(".img-click").on("click", function () {
-  //   console.log("successful click");
-  //   $(".img-click").on("click", function () {
-  //     $("#recipe-box").empty();
-  //     $("#recipe-box").removeClass("hide");
 
-  //     var recipeInt = $("<p>").text(response.meals[0].strInstructions);
-
-  //     $("#recipe-box").append(recipeInt);
-  //   });
-  // });
   function searchById(id) {
     $.ajax({
       type: "GET",
       url: `https://www.themealdb.com/api/json/v2/9973533/lookup.php?i=${id}`,
       dataType: "json",
-      success: function (response) {
-        $(".img-click").on("click", function () {
-          console.log("initial click");
-          $("#recipe-box").empty();
-          $("#recipe-box").removeClass("hide");
-
-          var recipeInt = $("<p>").text(response.meals[0].strInstructions);
-
-          $("#recipe-box").append(recipeInt);
-        });
-      },
-    });
+    }).then(function (response) {
+      console.log(response);
+      $(".img-click").on("click", function () {
+        $("#instructionSteps").text(response.meals[0].strInstructions);
+        $("#ingListOne").text(response.meals[0].strIngredient1);
+        $("#ingListTwo").text(response.meals[0].strIngredient2);
+        $("#ingListThree").text(response.meals[0].strIngredient3);
+        $("#ingListFour").text(response.meals[0].strIngredient4);
+        $("#ingListFive").text(response.meals[0].strIngredient5);
+        $("#ingListSix").text(response.meals[0].strIngredient6);
+        $("#ingListSeven").text(response.meals[0].strIngredient7);
+        $("#ingListEight").text(response.meals[0].strIngredient8);
+        $("#ingListNine").text(response.meals[0].strIngredient9);
+        $("#ingListTen").text(response.meals[0].strIngredient10);
+        $("#ingListEleven").text(response.meals[0].strIngredient11);
+        $("#ingListTwelve").text(response.meals[0].strIngredient12);
+        $("#ingListThirteen").text(response.meals[0].strIngredient13);
+        $("#ingListFourteen").text(response.meals[0].strIngredient14);
+        $("#ingListFifteen").text(response.meals[0].strIngredient15);
+        $("#ingListSixteen").text(response.meals[0].strIngredient16);
+        $("#ingListSeventeen").text(response.meals[0].strIngredient17);
+        $("#ingListEighteen").text(response.meals[0].strIngredient18);
+        $("#ingListNineteen").text(response.meals[0].strIngredient19);
+        $("#ingListTwenty").text(response.meals[0].strIngredient20);
+        $("#strMeasureOne").text(response.meal[0].strMeasure1);
+        $("#strMeasureTwo").text(response.meal[0].strMeasure2);
+        $("#strMeasureThree").text(response.meal[0].strMeasure3);
+        $("#strMeasureFour").text(response.meal[0].strMeasure4);
+        $("#strMeasureFive").text(response.meal[0].strMeasure5);
+        $("#strMeasureSix").text(response.meal[0].strMeasure6);
+        $("#strMeasureSeven").text(response.meal[0].strMeasure7);
+        $("#strMeasureEight").text(response.meal[0].strMeasure8);
+        $("#strMeasureNine").text(response.meal[0].strMeasure9);
+        $("#strMeasureTen").text(response.meal[0].strMeasure10);
+        $("#strMeasureEleven").text(response.meal[0].strMeasure11);
+        $("#strMeasureTwelve").text(response.meal[0].strMeasure12);
+        $("#strMeasureThirteen").text(response.meal[0].strMeasure13);
+        $("#strMeasureFourteen").text(response.meal[0].strMeasure14);
+        $("#strMeasureFifteen").text(response.meal[0].strMeasure15);
+        $("#strMeasureSixteen").text(response.meal[0].strMeasure16);
+        $("#strMeasureSeventeen").text(response.meal[0].strMeasure17);
+        $("#strMeasureEighteen").text(response.meal[0].strMeasure18);
+        $("#strMeasureNineteen").text(response.meal[0].strMeasure19);
+        $("#strMeasureTwenty").text(response.meal[0].strMeasure20);
+      })
+    })
   }
 
-  function showRecipeDetails() {
-    //on img-click we display recipe box and append in recipe instructions
-  }
 });
-// Generic function for displaying the movieInfo
-// $(document).on("click", ".movie", displayMovieInfo);function displayMovieInfo() {
-//   var movie = $(this).attr("data-name");
-//   // YOUR CODE GOES HERE!!! HINT: You will need to create a new div to hold the JSON.
-//   var queryURL =
-//     "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
-
-//   $.ajax({
-//     url: queryURL,
-//     method: "GET",
-//   }).then(function (res) {
-//     console.log("here is the movie data!");
-//     $(".movie-view").html(
-//       "<pre>" +
-//         JSON.stringify(
-//           res.Title + " was released in  " + res.Year,
-//           null,
-//           2
-//         ) +
-//         "</pre>"
-//     );
-//   });
-// }
